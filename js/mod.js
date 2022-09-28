@@ -1,8 +1,8 @@
 let modInfo = {
 	name: "The Breaking Bad Tree",
 	id: "brbatree",
-	author: "nobody",
-	pointsName: "points",
+	author: "barslyck, jessesex",
+	pointsName: "dollars",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
@@ -13,8 +13,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "Literally nothing",
+	num: "-1.0",
+	name: "pre-pre-pre-pre-pre-alpha",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -41,7 +41,7 @@ function canGenPoints(){
 function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
-
+		if (hasUpgrade('m', 11)) gain = gain.times(2)
 	let gain = new Decimal(1)
 	return gain
 }
