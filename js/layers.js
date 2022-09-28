@@ -25,7 +25,7 @@ addLayer("m", {
         {key: "m", description: "M: Reset for grams of meth", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true}
-    upgrades: {
+    ,upgrades: {
         11: {
             title: "Make this whatever you want!",
             description: "Double your point gain.",
