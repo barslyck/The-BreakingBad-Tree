@@ -27,9 +27,18 @@ addLayer("m", {
     layerShown(){return true}
     ,upgrades: {
         11: {
-            title: "Make this whatever you want!",
-            description: "Double your point gain.",
+            title: "Get diagnosed",
+            description: "Insurance kicks in, doubles point gain",
             cost: new Decimal(1),
+        }, 
+        12: {
+            title: "Gray Matter",
+            description: "Gretchen offers to help out, boost point gain based on grams of meth",
+            cost: new Decimal(2),
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         }, 
     },
 })
